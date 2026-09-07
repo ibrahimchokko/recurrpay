@@ -16,11 +16,17 @@
     "test:watch": "vitest",
     "lint": "eslint .",
     "dev:api": "pnpm --filter @recur/api dev",
-    "dev:scheduler": "pnpm --filter @recur/scheduler dev"
+    "dev:scheduler": "pnpm --filter @recur/scheduler dev",
+    "testnet:e2e": "node --experimental-strip-types scripts/testnet-e2e.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "@recur/core": "workspace:*",
+    "@recur/stellar": "workspace:*",
+    "@stellar/stellar-sdk": "^17.0.1"
   }
 }
