@@ -46,7 +46,7 @@ alternatives that were rejected.
 | Retry and dunning (3 backoff attempts, then cancel) | working, tested |
 | Double-entry ledger with balance invariants | working, tested |
 | Signed webhooks with retry | working, tested |
-| SEP-41 `transfer_from` executor | written, **not yet exercised on testnet** |
+| SEP-41 `transfer_from` executor | exercised on testnet: [approve](https://stellar.expert/explorer/testnet/tx/03375010efa6109bc38b3954b6d3348a8e559739e7956eb7dfa77ed81ccd94d6) + 3 charges — [`e7fb4a7e`](https://stellar.expert/explorer/testnet/tx/e7fb4a7ef0c8dd762bd180442c69008293e3813468e26d0e54ea55af8d986c9f), [`187c0dea`](https://stellar.expert/explorer/testnet/tx/187c0dea954f7d85e9181f30e909cf4e2f3d7a5c50be2a31a551da023bd8164d), [`e1f6bf20`](https://stellar.expert/explorer/testnet/tx/e1f6bf20505d5f74d8854ea0793a6881af687191ead10e7306d6ea5d9a937b56) — see [quickstart](docs/quickstart.md) |
 | Storage | in-memory only — Postgres adapter is [#1](../../issues) |
 | Merchant dashboard | not started |
 
@@ -75,7 +75,9 @@ curl -s localhost:3000/v1/plans \
 
 To run against Stellar testnet instead of the mock executor, set
 `STELLAR_RPC_URL`, `STELLAR_SPENDER_SECRET` and `RECUR_TOKEN_CONTRACT_ID` (see
-[`.env.example`](.env.example)).
+[`.env.example`](.env.example)). [`docs/quickstart.md`](docs/quickstart.md)
+walks through funding a payer, approving the engine, and driving three real
+charges end to end with `pnpm testnet:e2e`.
 
 ## Layout
 
