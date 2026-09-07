@@ -1,5 +1,7 @@
 # Recur
 
+[![CI](https://github.com/ibrahimchokko/recurrpay/actions/workflows/ci.yml/badge.svg)](https://github.com/ibrahimchokko/recurrpay/actions/workflows/ci.yml)
+
 **Recurring payments and subscription billing infrastructure for Stellar.**
 
 Stellar settles a payment in five seconds for a fraction of a cent, which makes
